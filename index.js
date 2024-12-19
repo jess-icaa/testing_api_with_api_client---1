@@ -31,50 +31,6 @@
 // Purpose:
 // Help teachers retrieve and analyze student performance efficiently.
 
-
-// const express = require('express');
-// const { resolve } = require('path');
-
-// const studentsdata = require('./data.json');
-// const app = express();
-// const port = 3010;
-
-// app.use(express.json());
-
-// app.post('/students/above-threshold', (req, res) => {
-//   try {
-//     const {threshold} = req.body;
-//     if (threshold === undefined) {
-//       return res.status(400).json({ error: "Threshold value is required." });
-//     } 
-
-//     if (typeof threshold !== 'number' || threshold < 0) {
-//       return res.status(400).json({ error: "Threshold must be a non-negative number." });
-//     }
-//   // Filter students whose total marks exceed the threshold
-//   const matchingStudents = studentsdata.filter(student => student.total > threshold)
-//   .map(student => ({ name: student.name, total: student.total }));
-
-// // Return the result
-// res.json({
-//   count: matchingStudents.length,
-//   students: matchingStudents
-// });
-
-// } catch (error) {
-// res.status(500).json({ error: "An error occurred while processing the request.", details: error.message });
-// }
-// });
-
-
-// app.get('/', (req, res) => {
-//   res.sendFile(resolve(__dirname, 'pages/index.html'));
-// });
-
-// app.listen(port, () => {
-//   console.log(`Example app listening at http://localhost:${3010}`);
-// });
-
 const express = require('express');
 const { resolve } = require('path');
 const studentsdata = require('./data.json'); // Loading data from the JSON file
